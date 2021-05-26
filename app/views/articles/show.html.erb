@@ -1,0 +1,9 @@
+<h1>Show Article</h1>
+<lable> <h3> Article Id</h3> </lable>
+    <%=  @article.id %><br>
+    <lable> <h3>Article Title </h3></lable>
+    <%=  @article.title %><br>
+    <lable> <h3>Article Body</h3> </lable>
+    <%=  @article.body %><br>
+    <hr>
+    <%= render partial: 'actions' , locals:{article: @article}%>
