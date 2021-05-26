@@ -26,7 +26,7 @@ class ArticlesController < ApplicationController
   def update
     if @article.update(article_params)
       redirect_to @article
-       render :edit
+      #  render :edit
     end
   end
 
