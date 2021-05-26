@@ -1,6 +1,9 @@
-<h1>Articles List</h1>
+<h1>Articles </h1>
+Our blog has <%= Article.public_count %> articles and counting!
+
 <%= link_to "New Article", new_article_path %>
 <% @articles.each do |article|  %>
+    <% unless article.archived? %>
     <lable> <h3> Article Id</h3> </lable>
     <%=  article.id %><br>
     <lable> <h3>Article Title </h3></lable>
@@ -10,6 +13,7 @@
     <%=  article.body %><br>
 
     <%= render  partial: 'actions' , locals:{article: article}%>
+<% end %>
     <hr>
 <% end %>
 
